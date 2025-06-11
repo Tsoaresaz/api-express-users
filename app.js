@@ -4,8 +4,16 @@ const errorHandler = require('./src/middlewares/errorHandler');
 const helmet = require('helmet');
 
 const usuariosRoutes = require('./src/routes/usuarios');
+const loginRoutes = require('./src/routes/login');
 
-app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self"],
+      scriptSrc: ["'self"],
+    },
+  })
+);
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -13,6 +21,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/usuarios', usuariosRoutes);
+app.use('/login', loginRoutes);
 
 app.use(errorHandler);
 
