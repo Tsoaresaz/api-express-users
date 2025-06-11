@@ -3,8 +3,14 @@ const router = express.Router();
 const usuariosController = require('../controller/usuariosController');
 const validarUsuario = require('../middlewares/validarUsuario');
 const authorizationToken = require('../middlewares/authorizationHandle');
+const mascaraEmail = require('../middlewares/mascaraEmail');
 
-router.get('/', authorizationToken, usuariosController.listarUsuarios);
+router.get(
+  '/',
+  authorizationToken,
+  mascaraEmail,
+  usuariosController.listarUsuarios
+);
 router.post(
   '/',
   authorizationToken,
