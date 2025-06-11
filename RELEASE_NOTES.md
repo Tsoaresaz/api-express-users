@@ -1,5 +1,11 @@
 # Release Notes
 
+## [1.0.1] - 2025-06-11
+
+### Adicionado
+
+- Feito o controle de emissão de erro stack para não enviar quando estiver com a `.env` em `production`
+
 ## [1.0.0] - 2025-06-11
 
 ### Adicionado
