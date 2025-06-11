@@ -1,5 +1,11 @@
 # Release Notes
 
+## [1.1.0] - 2025-06-11
+
+### Adicionado
+
+- Adicionado middleware de mascaramento do e-mail
+
 ## [1.0.1] - 2025-06-11
 
 ### Adicionado
