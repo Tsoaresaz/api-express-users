@@ -1,0 +1,25 @@
+{
+  "name": "api-nodejs",
+  "version": "1.0.0",
+  "description": "Criando minha primeira API NodeJS com Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": "20.18.0"
+  },
+  "keywords": [],
+  "author": "Thiago Soares <tsoaresaz@gmail.com> (https://github.com/tsoaresaz)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "zod": "^3.25.58"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
