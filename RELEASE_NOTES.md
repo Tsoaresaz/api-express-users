@@ -5,7 +5,7 @@
 ### Adicionado
 
 - Conexão com banco de dados MySQL.
-- Implementadas as requisições `GET` e `POST` na rota de usuários.
+- Implementadas as requisições `GET` e `POST` na rota `/api/v2/usuarios`.
 
 ## [1.1.0] - 2025-06-11
 
