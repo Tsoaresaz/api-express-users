@@ -12,3 +12,16 @@ exports.criarUsuario = async (nome, email) => {
   );
   return { id: result.insertId, nome, email };
 };
+
+exports.atualizarUsuario = async (id, nome, email) => {
+  const [result] = await pool.query(
+    'UPDATE usuarios SET nome = ?, email = ? WHERE id = ?',
+    [nome, email, id]
+  );
+  return result.affectedRows; // retorna a quantidade de linhas afetadas
+};
+
+exports.deletaUsuario = async (id) => {
+  const [result] = await pool.query('DELETE FROM usuarios WHERE id = ?', [id]);
+  return result.affectedRows;
+};
