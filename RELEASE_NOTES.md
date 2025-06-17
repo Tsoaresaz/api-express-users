@@ -1,5 +1,13 @@
 # Release Notes
 
+## [2.1.0] - 2025-06-17
+
+### Adicionado
+
+- Implementadas as requisições `PUT` e `DELETE` na rota `/api/v2/usuarios`.
+  - `PUT /api/v2/usuarios/:id`: Atualiza os dados de um usuário existente no banco MySQL.
+  - `DELETE /api/v2/usuarios/:id`: Remove um usuário do banco MySQL.
+
 ## [2.0.0] - 2025-06-16
 
 ### Adicionado
