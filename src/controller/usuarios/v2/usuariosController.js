@@ -56,3 +56,19 @@ exports.atualizarUsuario = async (req, res) => {
     res.status(500).json({ message: 'Erro ao atualizar o usuário' });
   }
 };
+
+exports.deletaUsuario = async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const linhasAfetadas = usuariosRepository.deletaUsuario(id);
+
+    if (linhasAfetadas === 0) {
+      return res.status(404).json({ message: 'Usuário não encontrado!' });
+    }
+
+    res.json({ message: 'Usuário removido com sucesso!' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Erro ao remover usuário' });
+  }
+};

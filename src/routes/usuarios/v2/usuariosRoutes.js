@@ -14,5 +14,6 @@ router.post(
   usuariosController.criarUsuario
 );
 router.put('/:id', authorizationToken, usuariosController.atualizarUsuario);
+router.delete('/:id', authorizationToken, usuariosController.deletaUsuario);
 
 module.exports = router;

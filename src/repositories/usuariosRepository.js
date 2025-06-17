@@ -20,3 +20,8 @@ exports.atualizarUsuario = async (id, nome, email) => {
   );
   return result.affectedRows; // retorna a quantidade de linhas afetadas
 };
+
+exports.deletaUsuario = async (id) => {
+  const [result] = await pool.query('DELETE FROM usuarios WHERE id = ?', [id]);
+  return result.affectedRows;
+};
