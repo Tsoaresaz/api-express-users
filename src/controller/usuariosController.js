@@ -28,7 +28,7 @@ exports.criarUsuarios = (req, res) => {
   console.log('Usuário recebido: ', novoUsuario);
   db.usuarios.push(novoUsuario);
 
-  res.status(201).json(novoUsuario);
+  res.status(201).json({ message: 'Usuário criado com sucesso', novoUsuario });
 };
 
 /**

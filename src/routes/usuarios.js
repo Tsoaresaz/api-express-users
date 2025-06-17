@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
+
 const usuariosController = require('../controller/usuariosController');
+
 const validarUsuario = require('../middlewares/validarUsuario');
 const authorizationToken = require('../middlewares/authorizationHandle');
 const mascaraEmail = require('../middlewares/mascaraEmail');

@@ -1,20 +1,27 @@
 # Release Notes
 
+## [2.0.0] - 2025-06-16
+
+### Adicionado
+
+- Conexão com banco de dados MySQL.
+- Implementadas as requisições `GET` e `POST` na rota de usuários.
+
 ## [1.1.0] - 2025-06-11
 
 ### Adicionado
 
-- Adicionado middleware de mascaramento do e-mail
+- Middleware para mascaramento de e-mail nas respostas da API.
 
 ## [1.0.1] - 2025-06-11
 
-### Adicionado
+### Ajustado
 
-- Feito o controle de emissão de erro stack para não enviar quando estiver com a `.env` em `production`
+- Ajustado o controle de emissão da stack de erro para suprimir detalhes quando a variável de ambiente `.env` estiver configurada como `production`.
 
 ## [1.0.0] - 2025-06-11
 
 ### Adicionado
 
-- Crud na rota de usuários
-- Rotas de login para emissão do token JWT fake
+- CRUD completo na rota de usuários.
+- Rotas de login para geração de token JWT de desenvolvimento (mock).
